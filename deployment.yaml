@@ -26,11 +26,11 @@ spec:
         imagePullPolicy: Always
         resources:
           requests:
-            memory: "100Mi"
-            cpu: "50m"
+            memory: "1200Mi"
+            cpu: "500m"
           limits:
-            memory: "100Mi"
-            cpu: "200m"
+            memory: "1400Mi"
+            cpu: "1000m"
         readinessProbe:
           httpGet:
             path: /healthzReadiness
@@ -46,4 +46,4 @@ spec:
             path: /healthzStartup
             port: 5000
           failureThreshold: 10
-          periodSeconds: 5
+          periodSeconds: 10
