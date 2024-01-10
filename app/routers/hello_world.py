@@ -1,8 +1,5 @@
-from fastapi import APIRouter
+from sklearn.ensemble import RandomForestRegressor
+import pickle
 
-router = APIRouter(prefix="/api/v1/hello-word", tags=["hello-world"])
-
-
-@router.get("")
-async def get_hello_word() -> str:
-    return "Hello World!"
+with open("model.pkl", mode= "rb") as file:
+    m: list[str] = pickle.load(file)

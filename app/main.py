@@ -6,7 +6,7 @@ from decouple import config
 from routers import healthz, hello_world
 
 app = FastAPI(
-    title="api-python-template",
+    title="api-python-solar-forecast",
     description=open("README.md", mode="r").read(),
 )
 
