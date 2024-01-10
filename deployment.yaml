@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-python-template
+  name: api-python-solar-forecast
   namespace: api
   labels:
-    app: api-python-template
+    app: api-python-solar-forecast
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: api-python-template
+      app: api-python-solar-forecast
   template:
     metadata:
       labels:
-        app: api-python-template
+        app: api-python-solar-forecast
     spec:
       containers:
-      - name: api-python-template
-        image: railnlays/api-python-template:latest
+      - name: api-python-solar-forecast
+        image: railnlays/api-python-solar-forecast:latest
         ports:
         - containerPort: 5000
         env:
