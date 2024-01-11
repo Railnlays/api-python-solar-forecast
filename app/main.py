@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from decouple import config
 
-from routers import healthz, hello_world
+from routers import healthz, predict
 
 app = FastAPI(
     title="api-python-solar-forecast",
@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(healthz.router)
-app.include_router(hello_world.router)
+app.include_router(predict.router)
 
 if __name__ == "__main__":
     uvicorn.run(
